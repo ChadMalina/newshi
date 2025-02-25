@@ -1,3 +1,6 @@
+from xml.dom.minidom import CharacterData
+
+
 class User:
     fullname="Paul"
     role_id="Worker"
@@ -27,9 +30,15 @@ class Person:
         result=f"{newword} , {roleup}"
         return result
 
-
 p1=Person("Joseph","lecturer",214135325,True)
 p2=Person("Alice","Student",45566,True)
 
 print(p1.transform_word("Transform Success"))
 print(p2.transform_word("Transform Success"))
+p1.fullname="Chad"
+p1.role_id="Admin"
+print(p1.fullname)
+print(p1.role_id)
+p1.nationality="Jamaican"
+del p1.staff_id
+print(p1)
